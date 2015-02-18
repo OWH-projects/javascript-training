@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <style>
+    #box { height:50px; width:50px; }
+    </style>
+</head>
+
+<body>
+
+<h1 id="greeting"></h1>
+
+<p>Click the box to change its color</p>
+<div id="box" style="background:red;" onclick="changeColor()"></div>
+
+<p>Enter a number in the text box</p>
+<input type="text" id="math" onkeyup="javascript: if (event.keyCode == 13) { mathIt() }" />
+<button id="click" onclick="mathIt()">Submit</button>
+<p id="hint"></p>
+
+<script>
+
+window.onload = function getName() {
+    var name = prompt("What is your name?");
+    document.getElementById('greeting').innerHTML = "Hello, " + name;
+}
+
+function changeColor() {
+    var box = document.getElementById('box');
+    if ( box.style.background === "red" )
+        { box.style.background = "blue" }
+    else { box.style.background = "red" }
+}
+
+function mathIt() {
+    var num = document.getElementById('math').value
+        , q = '';    
+    try {
+        if ( num === "") throw "dude come on you gotta type something";
+        q = Number(num);
+        if ( isNaN(q) ) throw "dude you know that ain't a number come on";
+        document.getElementById('hint').innerHTML = "<em>Psst. Check the console.</em>"
+        console.log(num.toString() + " x 10 = " + ( num * 10 ).toString());        
+    }
+    catch(err) {
+        alert(err);
+    }
+}
+
+
+
+</script>
+
+</body>
+
+</html>

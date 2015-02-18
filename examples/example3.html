@@ -1,0 +1,48 @@
+<html>
+
+<body>
+
+<span id="display"></span>&ensp;
+<select id="select_animal" onchange="getAnimal(this.value)">
+    <option>-- select an animal --</option>
+</select>
+
+<script src="data/animals.js"></script>
+
+<script>
+// function to check for a vowel: http://stackoverflow.com/a/5493740
+function vowelTest(s) {
+  return (/^[aeiou]$/i).test(s);
+}
+
+// loop over the data to populate the select menu
+for (i=0;i<anml.length;i++) {
+    var option = document.createElement("option");
+    option.text = anml[i].animal;
+    option.value = anml[i].animal.toLowerCase().replace(" ","-");
+    var select = document.getElementById("select_animal");
+    select.appendChild(option);
+}
+
+// function to change the content when an option is selected
+function getAnimal(x) {
+    for (i=0;i<anml.length;i++) {
+        if (x === anml[i].animal) {
+            var a = '';
+            var vowel = vowelTest(anml[i].collective[0]);
+            if (vowel === true) {
+                a = "an"
+            }
+            else {
+                a = "a"
+            }
+            var d = document.getElementById('display');
+            d.innerHTML = a + " " + anml[i].collective + " of ";
+        }
+    }
+} 
+
+</script>
+
+</body>
+</html>
