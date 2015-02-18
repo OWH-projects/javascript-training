@@ -27,7 +27,7 @@ for (i=0;i<anml.length;i++) {
 // function to change the content when an option is selected
 function getAnimal(x) {
     for (i=0;i<anml.length;i++) {
-        if (x === anml[i].animal) {
+        if (x === anml[i].animal.toLowerCase().replace(" ","-")) {
             var a = '';
             var vowel = vowelTest(anml[i].collective[0]);
             if (vowel === true) {

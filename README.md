@@ -138,7 +138,7 @@ Here's what a basic HTML table looks like behind the scenes:
 Not a heavy lift. But it would get old pretty quick if you had 100 things to tabulate instead of three. One solution: Use Javascript to loop over your data and generate the HTML code dynamically. Comme &ccedil;a:
 
 <pre>
-&lt;table id="fruit_table"></table>
+&lt;table id="fruit_table">&lt;/table>
 
 &lt;script>
 // store the data as an array of objects
@@ -160,7 +160,7 @@ Not a heavy lift. But it would get old pretty quick if you had 100 things to tab
 // start a loop
    for (i=0;i&lt;fruit.length;i++) {
 
-// in each loop, add data to the table_content variable
+// for each loop, add data to the table_content variable
         table_content += [
         '&lt;tr>&lt;td>',
         fruit[i].name,
