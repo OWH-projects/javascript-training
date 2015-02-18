@@ -58,7 +58,7 @@ To insert a comment &mdash; a note explaining some code &mdash; prepend two slas
 &lt;script>
 </pre>
 
-Enclose multiline comments in /*&emsp;&emsp;*/:
+Enclose multiline comments in /* &emsp;&emsp; */:
 
 <pre>
 &lt;script>
