@@ -35,20 +35,20 @@ Now open <code>example1.html</code> in a browser of your choice. You should get 
 ###Working with data
 
 #####String
-"Hello there, I am a string."
-"234"
+"Hello there, I am a string."<br>
+"234"<br>
 "true"
 
 #####Number
-213
+213<br>
 3.043
 
 #####Boolean
-true
+true<br>
 false
 
 ###Comments
-To insert a comment -- a note explaining some code -- prepend two slashes:
+To insert a comment &mdash; a note explaining some code &mdash; prepend two slashes:
 
 <pre>
 &lt;script>
@@ -58,7 +58,7 @@ To insert a comment -- a note explaining some code -- prepend two slashes:
 &lt;script>
 </pre>
 
-Enclose multiline comments in /*    */:
+Enclose multiline comments in /*&emsp;&emsp;*/:
 
 <pre>
 &lt;script>
@@ -162,9 +162,9 @@ Not a heavy lift. But it would get old pretty quick if you had 100 things to tab
 
 // in each loop, add data to the table_content variable
         table_content += [
-        '<tr><td>',
+        '&lt;tr>&lt;td>',
         fruit[i].name,
-        '</td></tr>'
+        '&lt;/td>&lt;/tr>'
         ].join('')
    }
 
@@ -173,9 +173,9 @@ Not a heavy lift. But it would get old pretty quick if you had 100 things to tab
 &lt;/script>
 </pre>
 
-You'll find a more advanced example of this in <code>example3.html</code> in the _examples_ folder. There, you'll find data from one of the best Wikipedia pages, <a href="http://en.wikipedia.org/wiki/List_of_English_terms_of_venery,_by_animal">List of English terms of venery</a>. I pulled my favorite entries into a spreadsheet and then used <a href="http://shancarter.github.io/mr-data-converter/">Mr. Data Converter</a> to convert the rows and columns of my spreadsheet into <a href="http://json.org/">a data structure that Javascript understands</a>. I saved the data in a file called <code>animals.js</code>, which you will find in _examples/data_, and which is linked to in the HTML file.
+You'll find a more advanced version of this in <code>example3.html</code> in the _examples_ folder. There, you'll find data from one of the best Wikipedia pages, <a href="http://en.wikipedia.org/wiki/List_of_English_terms_of_venery,_by_animal">List of English terms of venery</a>. I pulled my favorite entries into a spreadsheet and then used <a href="http://shancarter.github.io/mr-data-converter/">Mr. Data Converter</a> to convert the rows and columns of my spreadsheet into <a href="http://json.org/">a data structure that Javascript understands</a>. I saved the data in a file called <code>animals.js</code>, which you will find in _examples/data_, and which is linked to in the HTML file.
 
-The basic idea was to make a page with a dropdown menu (using the HTML <code>&lt;select></code> tag). When a user selects an option from this menu, the page will display the type of animal and its collective noun (e.g., "a shrewdness of apes").
+The basic idea was to make a page with a dropdown menu using the HTML <code>&lt;select></code> tag. When a user selects an option from this menu, the page will display the type of animal and its collective noun (e.g., "a shrewdness of apes").
 
 ###Tips
 <ol>
