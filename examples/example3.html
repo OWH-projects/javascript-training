@@ -29,7 +29,7 @@ function getAnimal(x) {
     for (i=0;i<anml.length;i++) {
         if (x === anml[i].animal.toLowerCase().replace(" ","-")) {
             var a = '';
-            var vowel = vowelTest(anml[i].collective[0]);
+            var vowel = vowelTest(anml[i].collective.slice(0,1));
             if (vowel === true) {
                 a = "an"
             }
