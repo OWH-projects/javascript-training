@@ -158,7 +158,7 @@ Not a heavy lift. But it would get old pretty quick if you had 100 things to tab
    var table_content = '';
 
 // start a loop
-   for (i=0;i<fruit.length;i++) {
+   for (i=0;i&lt;fruit.length;i++) {
 
 // in each loop, add data to the table_content variable
         table_content += [
