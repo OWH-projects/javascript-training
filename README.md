@@ -164,7 +164,9 @@ Not a heavy lift. But it would get old pretty quick if you had 100 things to tab
         table_content += [
         '&lt;tr>&lt;td>',
         fruit[i].name,
-        '&lt;/td>&lt;/tr>'
+        '&lt;/td>&lt;td>',
+        fruit[i].count,
+        &lt;/td>&lt;/tr>'
         ].join('')
    }
 
