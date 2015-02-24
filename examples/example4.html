@@ -6,7 +6,7 @@
 
 <span id="display"></span>&ensp;
 <select id="select_animal" onchange="getAnimal(this.value)">
-    <option>-- select an animal --</option>
+    <option value="">-- select an animal --</option>
 </select>
 
 <script src="data/animals.js"></script>
@@ -28,6 +28,10 @@ for (i=0;i<anml.length;i++) {
 
 // function to change the content when an option is selected
 function getAnimal(x) {
+    var d = document.getElementById('display');
+    if ( x === '' )
+        { d.innerHTML = '' }
+    else {
     for (i=0;i<anml.length;i++) {
         if (x === anml[i].animal.toLowerCase().replace(" ","-")) {
             var a = '';
@@ -38,10 +42,10 @@ function getAnimal(x) {
             else {
                 a = "a"
             }
-            var d = document.getElementById('display');
             d.innerHTML = a + " " + anml[i].collective + " of ";
         }
     }
+  }
 } 
 
 </script>
