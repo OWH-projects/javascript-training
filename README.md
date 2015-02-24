@@ -170,14 +170,14 @@ Not a heavy lift. But it would get old pretty quick if you had 100 things to tab
         ].join('')
    }
 
-// finally, set the table HTML equal to _table_content_   
+// finally, set the table HTML equal to table_content
    document.getElementById('fruit_table').innerHTML = table_content;
 &lt;/script>
 </pre>
 
-You'll find an example of this in <code>example3.html</code> in the _examples_ folder. Add new entries to a file called <code>journos.js</code> in the folder _examples/data_ and see what happens.
+You'll find another example of this in the file called <code>example3.html</code> in the _examples_ folder. Add new entries to the file called <code>journos.js</code> in the folder _examples/data_, then reload the page and see what happens.
 
-You'll find a more advanced example of HTML concatenation in <code>example4.html</code> in the _examples_ folder. There, you'll find data from one of my favorite Wikipedia pages, <a href="http://en.wikipedia.org/wiki/List_of_English_terms_of_venery,_by_animal">List of English terms of venery</a>. I pulled my favorite entries into a spreadsheet and then used <a href="http://shancarter.github.io/mr-data-converter/">Mr. Data Converter</a> to convert the rows and columns of my spreadsheet into <a href="http://json.org/">a data structure that Javascript understands</a>. I saved the data in a file called <code>animals.js</code>, which you will find in _examples/data_, and which is linked to in the HTML file.
+You'll find a more advanced example of HTML concatenation in <code>example4.html</code> in the _examples_ folder, which uses data from one of my favorite Wikipedia pages ever, <a href="http://en.wikipedia.org/wiki/List_of_English_terms_of_venery,_by_animal">List of English terms of venery</a>. I pulled my favorite entries into a spreadsheet and then used <a href="http://shancarter.github.io/mr-data-converter/">Mr. Data Converter</a> to convert the rows and columns of my spreadsheet into <a href="http://json.org/">a data structure that Javascript understands</a>. I saved the data in a file called <code>animals.js</code>, which you will find in _examples/data_, and which is linked to in the HTML file.
 
 The basic idea was to make a page with a dropdown menu using the HTML <code>&lt;select></code> tag. When a user selects an option from this menu, the page will display the type of animal and its collective noun (e.g., "a shrewdness of apes").
 
