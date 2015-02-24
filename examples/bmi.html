@@ -1,0 +1,59 @@
+<html>
+
+<h3 style="margin-bottom:5px;">Weight</h3>
+<input type="text" id="weight" style="width:50px" maxlength="3" onkeyup="javascript: if (event.keyCode == 13) { bmi() }" /> lbs
+
+<h3 style="margin-bottom:5px;">Height</h3>
+
+<input type="text" id="feet" style="width:20px" maxlength="1" onkeyup="javascript: if (event.keyCode == 13) { bmi() }" /> ' <input type="text" id="inches" style="width:30px" maxlength="2" onkeyup="javascript: if (event.keyCode == 13) { bmi() }" /> "
+<br><br>
+<input type="button" onclick="bmi()" value="Calculate" />
+<br><br>
+<div id="bmi"></div>
+
+<script>
+
+function bmi () {
+    var bmi = 0
+        , b = ''
+        , weight = document.getElementById('weight').value
+        , feet = document.getElementById('feet').value
+        , inches = document.getElementById('inches').value
+        , w = ''
+        , f = ''
+        , i = '';
+
+    try {        
+        if ( weight === "" || !weight ) throw "Please enter a weight.";
+        w = Number(weight);
+        if ( isNaN(w) ) throw "Please enter a weight that is actually a number";
+        
+        if ( feet === "" || !feet ) throw "Please enter something in the 'feet' field.";
+        f = Number(feet);
+        if ( isNaN(f) ) throw "Please enter something in the 'feet' field that is actually a number";
+        
+        if ( inches === "" || !inches ) throw "Please enter something in the 'inches' field.";
+        i = Number(inches);
+        if ( isNaN(i) ) throw "Please enter something in the 'inches' field that is actually a number";
+        
+        bmi = (w / Math.pow(((f * 12) + i), 2)) * 703;
+    
+        if ( bmi < 18.5)
+            { b = "underweight" }
+        else if ( bmi >= 18.5 && bmi <= 24.9 )
+            { b = "normal" }
+        else if ( bmi >= 25 && bmi <= 29.9 )
+            { b = "overweight" }
+        else
+            { b = "obese" }
+
+        document.getElementById('bmi').innerHTML = "Your BMI is " + bmi.toFixed(2) + ". According to the CDC, you are " + b + ".";
+    }
+    catch(err) {
+        alert(err);
+    }
+}
+
+</script>
+
+</html>
