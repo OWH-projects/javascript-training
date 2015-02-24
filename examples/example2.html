@@ -36,7 +36,7 @@ function mathIt() {
     var num = document.getElementById('math').value
         , q = '';    
     try {
-        if ( num === "") throw "dude come on you gotta type something";
+        if ( num === "" || !num ) throw "dude come on you gotta type something";
         q = Number(num);
         if ( isNaN(q) ) throw "dude you know that ain't a number come on";
         document.getElementById('hint').innerHTML = "<em>Psst. Check the console.</em>"
