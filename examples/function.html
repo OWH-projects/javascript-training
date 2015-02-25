@@ -1,0 +1,56 @@
+<html>
+
+<input type="button" id="multiplier" value="Click me!" onclick="thingDoer()" />
+<br><br>
+<div id="multiplier_out"></div>
+<br><br>
+<h3 style="margin-bottom:5px;">Enter two numbers</h3>
+<input type="text" id="m1" style="width:50px;" onkeyup="javascript: if (event.keyCode == 13) { multiplyIt() }" />&ensp;<input type="text" id="m2" style="width:50px;" onkeyup="javascript: if (event.keyCode == 13) { multiplyIt() }" />
+&ensp;
+<input type="button" id="multiplier_two" value="Click!" onclick="multiplyIt()"/>
+<br><br>
+<div id="multiplier_two_out"></div>
+
+<script>
+
+// this here is an anonymous function -- it doesn't take any arguments
+function thingDoer() {
+    var num1 = Math.floor(Math.random() * 50);
+    var num2 = Math.floor(Math.random() * 50);
+    var sum = num1 * num2;
+    document.getElementById('multiplier_out').innerHTML = num1 + " + " + num2 + " = " + sum;
+}
+
+// this function takes two arguments -- cat and dog
+function bananaGram(cat, dog) {
+    return cat + " * " + dog + " = " + cat*dog;
+}
+
+// ... which you can call within another function!
+function multiplyIt() {
+    var number1 = document.getElementById('m1').value
+        , number2 = document.getElementById('m2').value
+        , n1 = ''
+        , n2 = '';
+        
+    try {        
+        if ( number1 === "" || !number1 ) throw "gotta enter something, yo";
+        n1 = Number(number1);
+        if ( isNaN(n1) ) throw "that's not a number";
+        
+        if ( number2 === "" || !number2 ) throw "gotta enter something, yo";
+        n2 = Number(number2);
+        if ( isNaN(n2) ) throw "that's not a number";
+        
+        var msg = bananaGram(n1, n2);        
+        document.getElementById('multiplier_two_out').innerHTML = msg;
+    }
+    catch(err) {
+        alert(err);
+    }
+    
+}
+
+</script>
+
+</html>

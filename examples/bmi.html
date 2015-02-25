@@ -14,7 +14,7 @@
 <script>
 
 function bmi () {
-    var bmi = 0
+    var bmi = 0.0
         , b = ''
         , weight = document.getElementById('weight').value
         , feet = document.getElementById('feet').value
@@ -40,7 +40,7 @@ function bmi () {
     
         if ( bmi < 18.5)
             { b = "underweight" }
-        else if ( bmi >= 18.5 && bmi <= 24.9 )
+        else if ( bmi >= 18.5 && bmi < 25 )
             { b = "normal" }
         else if ( bmi >= 25 && bmi <= 29.9 )
             { b = "overweight" }
