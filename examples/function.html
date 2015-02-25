@@ -34,14 +34,11 @@ function multiplyIt() {
         , n2 = '';
         
     try {        
-        if ( number1 === "" || !number1 ) throw "gotta enter something, yo";
+        if ( number1 === "" || !number1 || number2 === "" || !number2 ) throw "gotta enter something, yo";
         n1 = Number(number1);
-        if ( isNaN(n1) ) throw "that's not a number";
-        
-        if ( number2 === "" || !number2 ) throw "gotta enter something, yo";
         n2 = Number(number2);
-        if ( isNaN(n2) ) throw "that's not a number";
-        
+        if ( isNaN(n1) || isNaN(n2) ) throw "come on dude that's not a number";
+               
         var msg = bananaGram(n1, n2);        
         document.getElementById('multiplier_two_out').innerHTML = msg;
     }
