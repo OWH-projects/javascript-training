@@ -18,21 +18,14 @@ function bmi () {
         , b = ''
         , weight = document.getElementById('weight').value
         , feet = document.getElementById('feet').value
-        , inches = document.getElementById('inches').value
-        , w = ''
-        , f = ''
-        , i = '';
+        , inches = document.getElementById('inches').value;
 
     try {
         if ( weight === "" || !weight || feet === "" || !feet || inches === "" || !inches ) throw "dude fill out the whole thing ok";
-
-        w = Number(weight);
-        f = Number(feet);
-        i = Number(inches);
         
-        if ( isNaN(w) || isNaN(f) || isNaN(i) ) throw "come on man you know they gotta be numbers";
+        if ( isNaN(Number(weight)) || isNaN(Number(feet)) || isNaN(Number(inches)) ) throw "come on man you know they gotta be numbers";
                 
-        bmi = (w / Math.pow(((f * 12) + i), 2)) * 703;
+        bmi = (Number(weight) / Math.pow(((Number(feet) * 12) + Number(inches)), 2)) * 703;
     
         if ( bmi < 18.5)
             { b = "underweight" }
