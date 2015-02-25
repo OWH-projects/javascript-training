@@ -1,24 +1,18 @@
 <html>
 
-<body>
-
 <div id="display"></div>
 
 <script src="data/journos.js"></script>
 
 <script>
 var banana = '';
+
 for (i=0;i<journo.length;i++) {
-    banana += [
-    '<h2>' + journo[i].name + '</h2>',
-    '<p>Section: ' + journo[i].section + '<br/>',
-    'Favorite color: <span style="color:' + journo[i].favorite_color + '">' + journo[i].favorite_color + '</span></p>'
-    ].join('');
+    banana += '<h2>' + journo[i].name + '</h2>' + '<p>Section: ' + journo[i].section + '<br/>' + 'Favorite color: <span style="color:' + journo[i].favorite_color + '">' + journo[i].favorite_color + '</span></p>'
 }
 
 document.getElementById('display').innerHTML = banana;
 
 </script>
 
-</body>
 </html>
