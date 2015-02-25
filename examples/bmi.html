@@ -23,19 +23,15 @@ function bmi () {
         , f = ''
         , i = '';
 
-    try {        
-        if ( weight === "" || !weight ) throw "Please enter a weight.";
+    try {
+        if ( weight === "" || !weight || feet === "" || !feet || inches === "" || !inches ) throw "dude fill out the whole thing ok";
+
         w = Number(weight);
-        if ( isNaN(w) ) throw "Please enter a weight that is actually a number";
-        
-        if ( feet === "" || !feet ) throw "Please enter something in the 'feet' field.";
         f = Number(feet);
-        if ( isNaN(f) ) throw "Please enter something in the 'feet' field that is actually a number";
-        
-        if ( inches === "" || !inches ) throw "Please enter something in the 'inches' field.";
         i = Number(inches);
-        if ( isNaN(i) ) throw "Please enter something in the 'inches' field that is actually a number";
         
+        if ( isNaN(w) || isNaN(f) || isNaN(i) ) throw "come on man you know they gotta be numbers";
+                
         bmi = (w / Math.pow(((f * 12) + i), 2)) * 703;
     
         if ( bmi < 18.5)
