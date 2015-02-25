@@ -1,5 +1,4 @@
 #Javascript
-
 Javascript is the scripting language that powers the web. You can use it to animate page elements, handle information submitted by the people who visit your web page and generally create more sophisticated interactive content than you could with HTML and CSS alone.
 
 Most of our <a href="http://www.dataomaha.com/media/web-uploads/maps/2015-01-testy_test_test.html">maps</a> and <a href="http://dataomaha.com/media/cody/oppd-bills/">charts</a> and other assorted widgetry depend on Javascript.
@@ -10,7 +9,7 @@ Most of our <a href="http://www.dataomaha.com/media/web-uploads/maps/2015-01-tes
 <li>Changing HTML content or styles dynamically</li>
 <li>Functions and variables</li>
 <li>If-else logic</li>
-<li>Working with data: numbers, strings and booleans</li>
+<li>Working with data: Objects and arrays</li>
 <li>The <em>for</em> loop</li>
 <li>Using developer tools to debug your code</li>
 </ol>
