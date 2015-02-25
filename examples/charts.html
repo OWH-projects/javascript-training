@@ -1,0 +1,36 @@
+<html>
+
+    <h2>Jail assaults</h3>
+    <div id="chart_div" style="width: 700px; height: 300px;"></div>
+
+    <script src="https://www.google.com/jsapi"></script>
+
+    <script>
+    google.load("visualization", "1", {packages:["corechart"]});
+    google.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Year', 'Other', 'Inmate on guard'],
+            ['2005', 10, 17],
+            ['2006', 4, 15],
+            ['2007', 8, 9],
+            ['2008', 14, 12],
+            ['2009', 32, 24],
+            ['2010', 26, 17],
+            ['2011', 35, 13],
+            ['2012', 20, 8],
+            ['2013 (YTD)', 12, 12]
+        ]);
+
+        var options = {
+        isStacked: 'true',
+        colors:['#BDD7E7','#08519C'],
+        chartArea: {left:40,top:30}
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+    }
+    </script>
+</html>
