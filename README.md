@@ -25,20 +25,6 @@ If you're writing Javascript directly in an HTML file, as we'll do today, you ne
 
 Later, as your scripts get more complicated, you'll want to save your scripts in a separate file and link to it from your HTML file, similar to how you linked to an external CSS file in the last session. It's not required, but it's best practice-y to separate page structure (HTML) from design rules (CSS) from interactivity (Javascript).
 
-Neato. Let's write some Javascript.
-
-In the _examples_ folder, open the file <code>example1.html</code> in your text editor (right-click and select "edit with" or "open with" the text editing program).
-
-Type (don't copy/paste) the following code into <code>example1.html</code>:
-
-<pre>
-&lt;script>
-    alert("Hello, friends. I am an alert.")
-&lt;/script>
-</pre>
-
-Now open <code>example1.html</code> in a browser of your choice. You should get a popup.
-
 ###Working with data
 
 #####String
