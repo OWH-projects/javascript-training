@@ -1,13 +1,14 @@
 <html>
 
 <h3 style="margin-bottom:5px;">Weight</h3>
-<input type="text" id="weight" style="width:50px" maxlength="3" onkeyup="javascript: if (event.keyCode == 13) { bmi() }" /> lbs
+<input type="text" id="weight" style="width:50px" maxlength="3" /> lbs
 
 <h3 style="margin-bottom:5px;">Height</h3>
 
-<input type="text" id="feet" style="width:20px" maxlength="1" onkeyup="javascript: if (event.keyCode == 13) { bmi() }" /> ' <input type="text" id="inches" style="width:30px" maxlength="2" onkeyup="javascript: if (event.keyCode == 13) { bmi() }" /> "
+<input type="text" id="feet" style="width:20px" maxlength="1" /> ' 
+<input type="text" id="inches" style="width:30px" maxlength="2" /> "
 <br><br>
-<input type="button" onclick="bmi()" value="Calculate" />
+<button id="clicker" onclick="bmi()">Calculate!</button>
 <br><br>
 <div id="bmi"></div>
 
@@ -42,6 +43,15 @@ function bmi () {
         alert(err);
     }
 }
+
+var t = document.getElementsByTagName('input');
+
+for ( i=0; i<t.length; i++ ) {
+    t[i].addEventListener('keyup', function() {
+        if ( event.keyCode === 13 ) { bmi(); }
+    });
+}
+
 
 </script>
 

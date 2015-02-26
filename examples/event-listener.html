@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <style>
+    .box { height:50px; width:50px; border: 1px #ccc solid; }
+    </style>
+</head>
+
+<p>Click this box to change its color</p>
+<div class="box" id="box1"></div>
+
+<p>Move your mouse over this box to change its color</p>
+<div class="box" id="box2"></div>
+
+<script>
+
+function changeColor() {
+    if ( this.style.background === "red" )
+        { this.style.background = "blue" }
+    else { this.style.background = "red" }
+}
+
+window.onload = function() {
+document.getElementById("box1").addEventListener("click", changeColor);
+document.getElementById("box2").addEventListener("mouseover", changeColor);
+}
+
+
+
+
+</script>
+
+</html>

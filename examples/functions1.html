@@ -1,0 +1,28 @@
+<html>
+
+<input type="text" id="msg" placeholder="Type something here and press enter" style="width:95%;" />
+
+<script>
+
+
+function logIt() {
+    console.log('hello there');
+}
+window.onload = logIt;
+
+
+
+
+
+
+function logMessage(x) {
+    console.log(x);
+}
+
+document.getElementById('msg').addEventListener('keyup', function() {
+    if ( event.keyCode === 13 ) { logMessage(this.value) }
+});
+
+</script>
+
+</html>

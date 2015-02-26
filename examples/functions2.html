@@ -1,0 +1,103 @@
+<html>
+
+<h3 style="margin-bottom:5px;">Adding random numbers</h3>
+<input type="button" value="Add!" onclick="addThis()" />
+<br><br>
+<div id="first_thing"></div>
+
+<br><br>
+
+<h3 style="margin-bottom:5px;">Multiplying two user-submitted numbers</h3>
+<input type="text" class="guernica" id="m1" style="width:50px;" />&ensp;
+<input type="text" class="guernica" id="m2" style="width:50px;" />&ensp;
+<input type="button" id="multiplier_two" value="Multiply!" onclick="multiplyIt()"/>
+<br><br>
+<div id="second_thing"></div>
+
+<h3 style="margin-bottom:5px;">Commas!</h3>
+<input type="button" id="comma_clicker" value="Add commas" onclick="commas()" />
+<br><br>
+<div id="third_thing">1234</div>
+
+
+
+<script>
+
+// this here is an anonymous function -- it doesn't take any arguments
+function addThis() {
+    var num1 = Math.floor(Math.random() * 50);
+    var num2 = Math.floor(Math.random() * 50);
+    var sum = num1 + num2;
+    document.getElementById('first_thing').innerHTML = num1 + " + " + num2 + " = " + sum;
+}
+
+// this function takes two arguments -- cat and dog
+function candyGram(cat, dog) {
+    return cat + " * " + dog + " = " + cat*dog;
+}
+
+// ... which you can call within another function!
+function multiplyIt() {
+    // set the variables
+    var number1 = document.getElementById('m1').value
+        , number2 = document.getElementById('m2').value
+        , n1 = ''
+        , n2 = '';
+
+        /* first let's make sure the user is entering something, and that that something is a number
+        */         
+
+    try {
+        if ( number1 === "" || !number1 || number2 === "" || !number2 ) throw "gotta enter something, yo";
+        n1 = Number(number1);
+        n2 = Number(number2);
+        if ( isNaN(n1) || isNaN(n2) ) throw "come on dude that's not a number";
+               
+        var msg = candyGram(n1, n2);        
+        document.getElementById('second_thing').innerHTML = msg;
+    }
+    catch(err) {
+        alert(err);
+    }   
+}
+
+// target elements by class name, add event listeners for pressing enter
+var g = document.getElementsByClassName('guernica');
+for ( i=0; i<g.length; i++ ) {
+    g[i].addEventListener('keyup', function() {
+        if (event.keyCode == 13) { multiplyIt() };
+    });
+}
+
+// function to test if one thing is in another thing
+function findIt(a, b) {
+    return a.indexOf(b) >= 0;
+}
+
+// our comma function
+function commas() {
+     var f = document.getElementById('third_thing')
+       , m = document.getElementById('comma_clicker')
+       , nStr = f.innerHTML;
+
+     if ( findIt(nStr,',') ) {
+        f.innerHTML = nStr.replace(',','');
+        m.value = "Add commas"
+     }
+     else {
+        nStr += '';
+        x = nStr.split('.');
+        x1 = x[0];
+        x2 = x.length > 1 ? '.' + x[1] : '';
+        var rgx = /(\d+)(\d{3})/;
+        while (rgx.test(x1)) {
+            x1 = x1.replace(rgx, '$1' + ',' + '$2');
+            }
+        f.innerHTML = x1 + x2;
+        m.value = "Remove commas"
+    }
+}
+
+</script>
+
+</html>

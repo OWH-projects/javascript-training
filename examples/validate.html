@@ -1,0 +1,31 @@
+<html>
+
+<p>Enter a number in the text box</p>
+<input type="text" id="math" />
+<button id="click" onclick="mathIt()">Submit</button>
+<p id="hint"></p>
+
+<script>
+
+function mathIt() {
+    var num = document.getElementById('math').value
+        , q = '';    
+    try {
+        if ( num === "" || !num ) throw "dude come on you gotta type something";
+        q = Number(num);
+        if ( isNaN(q) ) throw "dude you know that ain't a number come on";
+        document.getElementById('hint').innerHTML = "<em>Psst. Check the console.</em>"
+        console.log(num.toString() + " x 10 = " + ( num * 10 ).toString());        
+    }
+    catch(err) {
+        alert(err);
+    }
+}
+
+document.getElementById('math').addEventListener('keyup', function() {
+    if ( event.keyCode === 13 ) { mathIt()  }
+});
+
+</script>
+
+</html>

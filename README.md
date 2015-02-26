@@ -5,12 +5,18 @@ Most of our <a href="http://www.dataomaha.com/media/web-uploads/maps/2015-01-tes
 
 ###Session outline
 <ol>
-<li>What's Javascript good for, anyway?</li>
-<li>Changing HTML content or styles dynamically</li>
-<li>Functions and variables</li>
-<li>If-else logic</li>
+<li>Real-world examples</li>
+<li>Alerts, prompts and logging</li>
+<li>Targeting elements</li>
+<li>Changing HTML content or styles</li>
+<li>Variables</li>
+<li>Functions</li>
+<li>Event Listeners</li>
+<li>Validating inputs</li>
+<li>Working with data: If-else logic</li>
 <li>Working with data: Objects and arrays</li>
-<li>The <em>for</em> loop</li>
+<li>Working with data: The <em>for</em> loop</li>
+<li>Working with data: Looping over data to construct HTML</li>
 <li>Using developer tools to debug your code</li>
 </ol>
 
@@ -44,6 +50,9 @@ Now open <code>example1.html</code> in a browser of your choice. You should get 
 213<br>
 3.043
 
+#####Date
+new Date()
+
 #####Boolean
 true<br>
 false
@@ -53,9 +62,10 @@ To insert a comment &mdash; a note explaining some code &mdash; prepend two slas
 
 <pre>
 &lt;script>
-    var x = 40;
+    function (x) {
     // This message won't be interpreted by your browser
     return x - 30;
+    }
 &lt;script>
 </pre>
 
@@ -176,9 +186,9 @@ Not a heavy lift. But it would get old pretty quick if you had 100 things to tab
 &lt;/script>
 </pre>
 
-You'll find another example of this in the file called <code>example3.html</code> in the _examples_ folder. Add new entries to the file called <code>journos.js</code> in the folder _examples/data_, then reload the page and see what happens.
+You'll find another example of this in the file called <code>journos.html</code> in the _examples_ folder. Add new entries to the file called <code>journos.js</code>, which is in the folder _examples/data_, then reload the page and see what happens.
 
-You'll find a more advanced example of HTML concatenation in <code>example4.html</code> in the _examples_ folder, which uses data from one of my favorite Wikipedia pages ever, <a href="http://en.wikipedia.org/wiki/List_of_English_terms_of_venery,_by_animal">List of English terms of venery</a>. I pulled my favorite entries into a spreadsheet and then used <a href="http://shancarter.github.io/mr-data-converter/">Mr. Data Converter</a> to convert the rows and columns of my spreadsheet into <a href="http://json.org/">a data structure that Javascript understands</a>. I saved the data in a file called <code>animals.js</code>, which you will find in _examples/data_, and which is linked to in the HTML file.
+You'll find a more advanced example of HTML concatenation in the file <code>animals.html</code> in the _examples_ folder, which uses data from one of my favorite Wikipedia pages ever, <a href="http://en.wikipedia.org/wiki/List_of_English_terms_of_venery,_by_animal">List of English terms of venery</a>. I pulled my favorite entries into a spreadsheet and then used <a href="http://shancarter.github.io/mr-data-converter/">Mr. Data Converter</a> to convert the rows and columns of my spreadsheet into <a href="http://json.org/">a data structure that Javascript understands</a>. I saved the data in a file called <code>animals.js</code>, which you will find in _examples/data_, and which is linked to in the HTML file.
 
 The basic idea was to make a page with a dropdown menu using the HTML <code>&lt;select></code> tag. When a user selects an option from this menu, the page will display the type of animal and its collective noun (e.g., "a shrewdness of apes").
 
@@ -187,6 +197,14 @@ The basic idea was to make a page with a dropdown menu using the HTML <code>&lt;
 <li>Pay attention to the order in which you import Javascript libraries. If you have a script that needs jQuery to work, make sure you import jQuery first.</li>
 <li>Use Chrome or Firefox. Seriously. Both have handy developer tools that will make debugging Javascript much easier.</li>
 <li>Use console.log() statements liberally when debugging your scripts. Check the console for errors or use it to test out code (on Windows, <code>ctrl + shift + j</code> is the shortcut to view the console).</li>
-<li>Comment liberally. Your future self will thank you.</li>
+<li>Use lots of comments to explain what you're doing. Your future self will thank you.</li>
+<li>Pay attention to capitalization</li>
 <li>Javascript can be finicky about semicolons; <a href="http://www.codecademy.com/blog/78-your-guide-to-semicolons-in-javascript">here's a handy guide</a></li>
 </ol>
+
+###Resources
+<ul>
+<li><a href="http://www.w3schools.com/js/">W3 Schools</a></li>
+<li><a href="http://www.codecademy.com/en/tracks/javascript">Codecademy</a></li>
+<li><a href="http://eloquentjavascript.net/">Eloquent JavaScript</a></li>
+</ul>
