@@ -13,14 +13,6 @@ var journo = [
         "name": "Graham Archer",
         "section": "Sports",
         "favorite_color": "purple"
-    }
-    /*
-    
-    add more people here and then reload the page to see what happens
-    
-    pick the color names from here: http://www.w3schools.com/html/html_colornames.asp
-
-    ... or use hexadecimal codes: http://www.w3schools.com/tags/ref_colorpicker.asp    
-
-    */
+    }  
+//    add more people here and then reload the page to see what happens
 ]
