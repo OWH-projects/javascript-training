@@ -182,7 +182,7 @@ The basic idea was to make a page with a dropdown menu using the HTML <code>&lt;
 <ol>
 <li>Pay attention to the order in which you import Javascript libraries. If you have a script that needs jQuery to work, make sure you import jQuery first.</li>
 <li>Use Chrome or Firefox. Seriously. Both have handy developer tools that will make debugging Javascript much easier.</li>
-<li>Use console.log() statements liberally when debugging your scripts. Check the console for errors or use it to test out code (on Windows, <code>ctrl + shift + j</code> is the shortcut to view the console).</li>
+<li>Use console.log() statements liberally when debugging your scripts. Check the console for errors or use it to test out code. To view the console, try F12 or, if you're on a Mac, Command + Option + I.</li>
 <li>Use lots of comments to explain what you're doing. Your future self will thank you.</li>
 <li>Pay attention to capitalization</li>
 <li>Javascript can be finicky about semicolons; <a href="http://www.codecademy.com/blog/78-your-guide-to-semicolons-in-javascript">here's a handy guide</a></li>
