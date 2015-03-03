@@ -1,0 +1,25 @@
+<html>
+
+<h2>Open the console, then click the box</h2>
+<div id="bleh" style="width:50px; height:50px; background:blue;"></div>
+
+<script>
+
+var counter = 1;
+
+function clickLog() {
+    var pl = '';
+    if ( counter === 1 ) { pl = 'time.' } else { pl = 'times.' }
+    console.log('You have clicked the box', counter.toString(), pl);
+    counter += 1;
+}
+
+function listen(elid, listener, task) {
+    document.getElementById(elid).addEventListener(listener, task);
+}
+
+listen("bleh", "click", clickLog);
+
+</script>
+
+</html>
