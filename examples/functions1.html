@@ -1,22 +1,18 @@
 <html>
 
-<input type="text" id="msg" placeholder="Type something here and press enter" style="width:95%;" />
+<p>Try F12 to open your console. Look for a message.</p>
+<input type="text" id="msg" placeholder="Now, with your console open, type something here and press enter" style="width:95%;" />
 
 <script>
-
 
 function logIt() {
     console.log('hello there');
 }
 window.onload = logIt;
 
-
-
-
-
-
 function logMessage(x) {
     console.log(x);
+    document.getElementById('msg').value = '';
 }
 
 document.getElementById('msg').addEventListener('keyup', function() {
